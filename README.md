@@ -31,15 +31,15 @@ Description
 
 ### Schematics and Layouts
 ---
-![image](./lib/pgmirror/figures/progmirror_circuit.png)
-![image](./lib/pgmirror/figures/progmirror_layout.png)
+![image](./lib/progmirror/figures/progmirror_circuit.png)
+![image](./lib/progmirror/figures/progmirror_layout.png)
 
 Programmable cascode current mirror circuit diagram and layout.
 
 ### Simulation Results
 
 #### TT corner
-![image](./docs/plots/tt_dc_vdd_io.png)
+![image](./lib/progmirror/plots/progmirror_tb0.png)
 
 Status and Issues
 ============
