@@ -1,0 +1,111 @@
+* Programmable mirror testbench
+
+* Include SkyWater sky130 device models
+.lib "/usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.param mc_mm_switch=1
+.include "../mag/progmirror.spice"
+
+* supply voltages
+vdda	vdda 0 
+vssa	vssa 0 0.0
+
+* switches
+va3 a3 vssa 0.0
+va2 a2 vssa 0.0
+va1 a1 vssa 0.0
+va0 a0 vssa 3.3
+
+vb3 b3 vssa 0.0
+vb2 b2 vssa 0.0
+vb1 b1 vssa 0.0
+vb0 b0 vssa 3.3  
+
+
+* input signals
+ii vdda ii 1u
+
+* DUT
+x0 ii io vssa a3 a2 a1 a0 b3 b2 b1 b0 progmirror
+vo io vssa 1.65
+
+.option gmin=1e-14
+.option seed=random
+.control
+  set appendwrite
+  
+  set curplot=new          $ create a new plot
+  set scratch=$curplot     $ store its name to 'scratch'
+  setplot $scratch         $ make 'scratch' the active plot
+
+  let a  = 0
+  let a3 = 0
+  let a2 = 0
+  let a1 = 0
+  let a0 = 3.3
+
+  let b  = 0
+  let b3 = 0
+  let b2 = 0
+  let b1 = 0
+  let b0 = 3.3
+
+  while a < 4
+	alter va3 dc=0.0
+	alter va2 dc=0.0
+	alter va1 dc=0.0
+	alter va0 dc=0.0
+
+  	if a eq 0
+  		alter va0 dc=3.3
+  	end
+
+  	if a eq 1
+  		alter va1 dc=3.3
+  	end
+
+  	if a eq 2
+  		alter va2 dc=3.3
+  	end
+
+  	if a eq 3
+  		alter va3 dc=3.3
+  	end
+
+ 	while b < 4
+ 		alter vb3 dc=0.0
+		alter vb2 dc=0.0
+	        alter vb1 dc=0.0
+		alter vb0 dc=0.0
+
+	  	if b = 0
+	  		alter vb0 dc=3.3
+  		end
+ 	
+	  	if b = 1
+	  		alter vb1 dc=3.3
+  		end
+
+	  	if b = 2
+	  		alter vb2 dc=3.3
+  		end
+
+	  	if b = 3
+	  		alter vb3 dc=3.3
+  		end
+  		
+  	 	op
+		print -i(vo)
+	        set dt = $curplot           $ store the current plot to dt 
+		setplot $scratch            $ make 'scratch' the active plot
+		let io = -{$dt}.i(vo)
+*		echo $&a $&b $&io
+		wrdata ../data/progmirror_tb1.txt $&io
+	  	let b = b + 1
+ 	end
+ 	let b = 0
+  	let a = a + 1
+  end
+     		    
+.endc
+
+.end

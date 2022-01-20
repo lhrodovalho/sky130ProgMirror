@@ -1,0 +1,40 @@
+* Programmable mirror testbench
+
+* Include SkyWater sky130 device models
+.lib "/usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.param mc_mm_switch=0
+.include "../mag/progmirror.spice"
+
+* supply voltages
+vdda	vdda 0 
+vssa	vssa 0 0.0
+
+* switches
+va3 a3 vssa 0.0
+va2 a2 vssa 0.0
+va1 a1 vssa 0.0
+va0 a0 vssa 3.3
+
+vb3 b3 vssa 0.0
+vb2 b2 vssa 0.0
+vb1 b1 vssa 0.0
+vb0 b0 vssa 3.3  
+
+
+* input signals
+ii vdda ii 1u
+
+* DUT
+x0 ii io vssa a3 a2 a1 a0 b3 b2 b1 b0 progmirror
+vo io vssa 1.65
+
+.option gmin=1e-14
+.option seed=random
+.control
+	
+  	 	dc vo 10m 3.3 10m
+  	 	plot -i(vo)
+		wrdata ../data/progmirror_tb0.txt -i(vo)
+.endc
+
+.end

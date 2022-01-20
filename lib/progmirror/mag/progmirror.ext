@@ -1,0 +1,203 @@
+timestamp 1642601396
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use prognmos prognmos_3 1 0 240 0 1 5360
+use prognmos prognmos_2 1 0 240 0 1 7520
+use prognmos prognmos_1 1 0 240 0 1 3200
+use prognmos prognmos_0 1 0 240 0 1 1040
+port "vss" 5 -160 -400 -80 -320 m3
+port "vss" 5 -160 8880 -80 8960 m3
+port "b4" 13 2880 -400 2960 -320 m3
+port "b4" 13 2880 8880 2960 8960 m3
+port "b3" 12 2720 -400 2800 -320 m3
+port "b3" 12 2720 8880 2800 8960 m3
+port "b2" 11 2560 -400 2640 -320 m3
+port "b2" 11 2560 8880 2640 8960 m3
+port "b1" 10 2400 -400 2480 -320 m3
+port "b1" 10 2400 8880 2480 8960 m3
+port "a4" 9 2240 -400 2320 -320 m3
+port "a4" 9 2240 8880 2320 8960 m3
+port "a3" 8 2080 -400 2160 -320 m3
+port "a3" 8 2080 8880 2160 8960 m3
+port "a2" 7 1920 -400 2000 -320 m3
+port "a2" 7 1920 8880 2000 8960 m3
+port "a1" 6 1760 -400 1840 -320 m3
+port "a1" 6 1760 8880 1840 8960 m3
+port "io" 2 -640 -400 -560 -320 m3
+port "io" 2 -640 8880 -560 8960 m3
+port "ii" 1 -800 -400 -720 -320 m3
+port "ii" 1 -800 8880 -720 8960 m3
+node "xr" 6 3817.92 -320 1840 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 51200 1600 697600 17600 0 0 0 0 0 0
+node "xl" 9 4554.08 -480 1680 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 153600 4480 697600 17600 0 0 0 0 0 0
+node "vss" 16 5554.96 -160 8880 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 281600 9920 748800 18880 0 0 0 0 0 0
+node "b4" 11 5462.24 2880 8880 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 243200 6720 736000 18880 0 0 0 0 0 0
+node "b3" 11 5250.72 2720 8880 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 217600 6080 736000 18880 0 0 0 0 0 0
+node "b2" 10 5039.2 2560 8880 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 192000 5440 736000 18880 0 0 0 0 0 0
+node "b1" 10 4827.68 2400 8880 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 166400 4800 736000 18880 0 0 0 0 0 0
+node "a4" 9 4616.16 2240 8880 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 140800 4160 736000 18880 0 0 0 0 0 0
+node "a3" 9 4404.64 2080 8880 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 115200 3520 736000 18880 0 0 0 0 0 0
+node "a2" 8 4193.12 1920 8880 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 89600 2880 736000 18880 0 0 0 0 0 0
+node "a1" 8 3981.6 1760 8880 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 64000 2240 736000 18880 0 0 0 0 0 0
+node "io" 8 4456.4 -640 8880 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 89600 2720 736000 18880 0 0 0 0 0 0
+node "ii" 11 5387.36 -800 8880 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 230400 6560 736000 18880 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "b2" "a1" 209.92
+cap "a1" "a2" 7954.92
+cap "ii" "xl" 3003.88
+cap "b2" "b1" 8754.92
+cap "a2" "b1" 209.92
+cap "xl" "xr" 7486.84
+cap "b4" "b3" 9171.59
+cap "a4" "b2" 2724.92
+cap "a4" "a2" 2858.25
+cap "a3" "b4" 226.587
+cap "a3" "b3" 209.92
+cap "ii" "xr" 514.88
+cap "io" "vss" 393.253
+cap "b2" "a2" 209.92
+cap "a1" "b4" 226.587
+cap "a1" "b3" 209.92
+cap "b1" "b4" 226.587
+cap "b1" "b3" 3058.25
+cap "a1" "a3" 2791.59
+cap "xl" "io" 6971.96
+cap "a4" "b4" 226.587
+cap "a3" "b1" 2724.92
+cap "a4" "b3" 209.92
+cap "a4" "a3" 8354.92
+cap "ii" "io" 8276.55
+cap "xl" "vss" 3413.8
+cap "b2" "b4" 3141.59
+cap "b2" "b3" 8954.92
+cap "a2" "b4" 226.587
+cap "a2" "b3" 209.92
+cap "io" "xr" 2460.63
+cap "b2" "a3" 209.92
+cap "a1" "b1" 209.92
+cap "ii" "vss" 1208.51
+cap "a3" "a2" 8154.92
+cap "vss" "xr" 7448.55
+cap "a4" "a1" 209.92
+cap "a4" "b1" 7754.92
+cap "prognmos_0/VSS" "prognmos_0/A4" 19.2
+cap "prognmos_0/VSS" "prognmos_0/A3" 19.2
+cap "prognmos_0/VSS" "prognmos_0/A2" 19.2
+cap "prognmos_0/A3" "prognmos_0/A1" 1.42109e-14
+cap "prognmos_0/A4" "prognmos_0/A2" 1.42109e-14
+cap "prognmos_0/VSS" "prognmos_0/A1" 19.2
+cap "prognmos_0/A4" "a2" -53.46
+cap "a2" "prognmos_0/A1" -53.46
+cap "prognmos_0/A2" "a2" -53.46
+cap "prognmos_0/A3" "a2" -53.46
+subcap "xr" -2886.59
+cap "prognmos_0/S" "prognmos_0/D" 144.2
+cap "prognmos_0/S" "prognmos_0/A2" 2.08722e-14
+cap "prognmos_0/S" "prognmos_0/A1" 1.59872e-14
+cap "prognmos_0/S" "prognmos_0/G" 19.2
+cap "prognmos_0/S" "prognmos_0/B1" -2.84217e-14
+cap "prognmos_0/S" "prognmos_1/A4" 125
+cap "prognmos_0/VSS" "prognmos_1/VSS" 720
+cap "prognmos_0/VSS" "prognmos_1/A4" 225
+cap "prognmos_1/VSS" "prognmos_0/D" 225
+cap "prognmos_1/A4" "prognmos_1/A2" 7.10543e-15
+cap "prognmos_1/VSS" "prognmos_1/A4" 19.2
+cap "prognmos_1/A4" "a2" -17.82
+cap "prognmos_1/VSS" "prognmos_1/G" 1.77636e-14
+cap "prognmos_1/D" "prognmos_1/S" -2.13163e-14
+cap "prognmos_1/VSS" "prognmos_1/S" 19.2
+cap "prognmos_1/A1" "prognmos_1/VSS" 19.2
+cap "prognmos_1/A3" "prognmos_1/VSS" 19.2
+cap "prognmos_1/A3" "prognmos_1/A1" 1.42109e-14
+cap "prognmos_1/A2" "prognmos_1/VSS" 19.2
+cap "prognmos_1/A4" "prognmos_1/A2" -2.13163e-14
+cap "prognmos_1/A3" "a2" -17.82
+cap "prognmos_1/A2" "a2" -17.82
+cap "prognmos_1/A1" "a2" -17.82
+cap "prognmos_1/VSS" "prognmos_1/D" 144.2
+cap "prognmos_1/D" "prognmos_1/S" -2.84217e-14
+cap "prognmos_1/G" "prognmos_1/VSS" 19.2
+cap "prognmos_1/G" "prognmos_1/S" -5.68434e-14
+cap "prognmos_1/VSS" "prognmos_3/A4" 125
+cap "prognmos_3/A2" "prognmos_3/A1" -2.27374e-13
+cap "prognmos_1/VSS" "prognmos_3/A3" 19.2
+cap "prognmos_1/VSS" "prognmos_1/D" 225
+cap "prognmos_3/A4" "prognmos_1/VSS" 244.2
+cap "prognmos_3/A3" "prognmos_3/A1" -8.52651e-14
+cap "prognmos_1/VSS" "prognmos_3/A1" 19.2
+cap "prognmos_3/A2" "prognmos_1/VSS" 19.2
+cap "prognmos_3/A4" "prognmos_3/A2" -5.68434e-14
+cap "prognmos_3/A3" "prognmos_3/A2" -17.82
+cap "prognmos_3/A4" "prognmos_3/A2" -17.82
+cap "prognmos_3/A2" "prognmos_3/S" 1.42109e-14
+cap "prognmos_3/S" "prognmos_3/G" 19.2
+cap "prognmos_3/S" "prognmos_3/B1" -2.84217e-14
+cap "prognmos_3/S" "prognmos_2/A4" 62.5
+cap "prognmos_3/S" "prognmos_3/A1" 4.26326e-14
+cap "prognmos_3/S" "prognmos_3/D" 144.2
+cap "prognmos_2/A4" "prognmos_3/VSS" 112.5
+cap "prognmos_3/VSS" "prognmos_2/VSS" 720
+cap "prognmos_2/VSS" "prognmos_3/D" 225
+cap "prognmos_3/VSS" "prognmos_2/G" 1.77636e-14
+cap "prognmos_2/A4" "prognmos_3/VSS" 62.5
+cap "prognmos_2/A2" "prognmos_2/VSS" 19.2
+cap "prognmos_2/A4" "prognmos_3/VSS" 112.5
+cap "prognmos_2/A4" "prognmos_2/A2" -5.68434e-14
+cap "prognmos_2/A3" "prognmos_2/VSS" 19.2
+cap "prognmos_2/VSS" "prognmos_2/A1" 19.2
+cap "prognmos_2/A4" "prognmos_2/VSS" 19.2
+cap "prognmos_2/A3" "prognmos_2/A1" -8.52651e-14
+cap "prognmos_2/A2" "prognmos_2/A3" -17.82
+cap "prognmos_2/A2" "prognmos_2/A4" -17.82
+subcap "vss" -4637.45
+subcap "io" -4026.72
+subcap "ii" -3881.48
+cap "prognmos_2/S" "prognmos_2/D" 3.41061e-13
+cap "prognmos_2/VSS" "prognmos_2/S" 19.2
+cap "prognmos_2/VSS" "prognmos_2/D" 38.4
+subcap "a3" -4408.48
+subcap "a2" -3659.28
+subcap "a1" -3447.76
+subcap "b4" -4928.4
+subcap "b3" -4716.88
+subcap "b2" -4505.36
+subcap "b1" -4293.84
+subcap "a4" -4082.32
+subcap "a3" -3870.8
+subcap "a2" -3970.48
+subcap "a1" -4074.96
+merge "prognmos_2/A1" "prognmos_3/A1" -506.08 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 67200 -960 118400 -2000 0 0 0 0 0 0
+merge "prognmos_3/A1" "a1"
+merge "prognmos_2/G" "prognmos_2/D" -316.544 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -513280 -480 0 0 0 0 0 0 0 0
+merge "prognmos_2/D" "prognmos_1/G"
+merge "prognmos_1/G" "ii"
+merge "prognmos_2/VSS" "prognmos_3/S" -590.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2880 0 0 0 0 0 0 0 0
+merge "prognmos_3/S" "prognmos_3/VSS"
+merge "prognmos_3/VSS" "prognmos_0/S"
+merge "prognmos_0/S" "prognmos_1/VSS"
+merge "prognmos_1/VSS" "prognmos_0/VSS"
+merge "prognmos_0/VSS" "vss"
+merge "vss" "VSUBS"
+merge "prognmos_2/A3" "prognmos_3/A3" -2197.64 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -166400 -960 331800 -10400 0 0 0 0 0 0
+merge "prognmos_3/A3" "a3"
+merge "prognmos_2/A2" "prognmos_3/A2" -892.8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -176000 -1200 -60800 -2880 0 0 0 0 0 0
+merge "prognmos_3/A2" "a2"
+merge "prognmos_2/A4" "prognmos_3/A4" -604.88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -32000 -960 -70400 -2000 0 0 0 0 0 0
+merge "prognmos_3/A4" "a4"
+merge "prognmos_1/D" "io" -544.284 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -211680 -800 -70400 -2000 0 0 0 0 0 0
+merge "prognmos_1/A1" "prognmos_0/A1" -757.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -390400 -960 -70400 -2000 0 0 0 0 0 0
+merge "prognmos_0/A1" "b1"
+merge "prognmos_1/S" "prognmos_0/D" -1366.64 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -320 -275200 -6960 0 0 0 0 0 0
+merge "prognmos_0/D" "xr"
+merge "prognmos_1/A2" "prognmos_0/A2" -686.48 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -224000 -960 -70400 -2000 0 0 0 0 0 0
+merge "prognmos_0/A2" "b2"
+merge "prognmos_1/A3" "prognmos_0/A3" -621.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -70400 -960 -70400 -2000 0 0 0 0 0 0
+merge "prognmos_0/A3" "b3"
+merge "prognmos_1/A4" "prognmos_0/A4" -588.56 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6400 -960 -70400 -2000 0 0 0 0 0 0
+merge "prognmos_0/A4" "b4"
+merge "prognmos_2/S" "prognmos_3/G" -2997.87 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -180450 -640 -7000 -14000 0 0 0 0 0 0
+merge "prognmos_3/G" "prognmos_3/D"
+merge "prognmos_3/D" "prognmos_0/G"
+merge "prognmos_0/G" "xl"
